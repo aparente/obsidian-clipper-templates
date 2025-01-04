@@ -1,0 +1,83 @@
+{
+  "schemaVersion": "0.1.0",
+  "name": "Nature",
+  "behavior": "create",
+  "noteNameFormat": "{{meta:name:citation_title}} ({{meta:name:prism.doi}})",
+  "path": "References/Papers",
+  "noteContentFormat": "## Summary\n\n{{description}}\n\n## Highlights\n\n{{highlights}}\n\n## Notes\n\n",
+  "properties": [
+    {
+      "name": "title",
+      "value": "{{meta:name:citation_title}}",
+      "type": "text"
+    },
+    {
+      "name": "authors",
+      "value": "{{meta:name:citation_author|wikilink|join}}",
+      "type": "multitext"
+    },
+    {
+      "name": "date",
+      "value": "{{meta:name:citation_publication_date|date:YYYY-MM-DD}}",
+      "type": "date"
+    },
+    {
+      "name": "url",
+      "value": "{{meta:name:prism.url}}",
+      "type": "text"
+    },
+    {
+      "name": "doi",
+      "value": "{{meta:name:prism.doi}}",
+      "type": "text"
+    },
+    {
+      "name": "journal",
+      "value": "{{meta:name:citation_journal_title}}",
+      "type": "text"
+    },
+    {
+      "name": "journal_abbrev",
+      "value": "{{meta:name:citation_journal_abbrev}}",
+      "type": "text"
+    },
+    {
+      "name": "volume",
+      "value": "{{meta:name:citation_volume}}",
+      "type": "text"
+    },
+    {
+      "name": "issue",
+      "value": "{{meta:name:citation_issue}}",
+      "type": "text"
+    },
+    {
+      "name": "pages",
+      "value": "{{meta:name:citation_firstpage}}-{{meta:name:citation_lastpage}}",
+      "type": "text"
+    },
+    {
+      "name": "publisher",
+      "value": "{{meta:name:citation_publisher}}",
+      "type": "text"
+    },
+    {
+      "name": "type",
+      "value": "{{meta:name:citation_article_type}}",
+      "type": "text"
+    },
+    {
+      "name": "created",
+      "value": "{{date}}",
+      "type": "date"
+    },
+    {
+      "name": "tags",
+      "value": "papers, research, to-read",
+      "type": "multitext"
+    }
+  ],
+  "triggers": [
+    "https://www.nature.com/articles/"
+  ]
+} 
