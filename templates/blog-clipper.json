@@ -1,0 +1,36 @@
+{
+	"schemaVersion": "0.1.0",
+	"name": "Blog",
+	"behavior": "create",
+	"noteContentFormat": "{{content}}",
+	"properties": [
+		{
+			"name": "tags",
+			"value": "{{\\\"3 tags describing this article, including \\\"blog\\\"\\\"}}",
+			"type": "multitext"
+		},
+		{
+			"name": "date",
+			"value": "{{published}}",
+			"type": "date"
+		},
+		{
+			"name": "title",
+			"value": "{{title}}",
+			"type": "text"
+		},
+		{
+			"name": "author",
+			"value": "{{author|wikilink|join|replace:\\\"/\\[(\\w+) ([^\\]]+)\\]/g\\\":\\\"[$2; $1]\\\"}}",
+			"type": "multitext"
+		},
+		{
+			"name": "url",
+			"value": "{{url}}",
+			"type": "text"
+		}
+	],
+	"triggers": [],
+	"noteNameFormat": "{{title|safe_name:mac}}",
+	"path": "Clippings"
+}

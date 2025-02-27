@@ -1,0 +1,43 @@
+{
+	"schemaVersion": "0.1.0",
+	"name": "STAT News",
+	"behavior": "create",
+	"noteContentFormat": "{{\"the content of this publication with 1. People's names in wikilinks, in the format [[Last Name; First Name Middle Initial.]]. If no Middle Initial is available, do not include it and use the format. 2. Institution names in wikilinks e.g. [[Scribe Therapeutics]]. Do not summarize, include all of the content.\"}}",
+	"properties": [
+		{
+			"name": "title",
+			"value": "{{title}}",
+			"type": "text"
+		},
+		{
+			"name": "author",
+			"value": "{{\\\"the authors of this publication in wikilinks, in the format [[Last Name; First Name Middle Initial]]. If no Middle Initial is available, do not include it and use the format  [[Last Name; First Name]]\\\"}}",
+			"type": "multitext"
+		},
+		{
+			"name": "url",
+			"value": "{{url}}",
+			"type": "text"
+		},
+		{
+			"name": "date",
+			"value": "{{date|date:YYYY-MM-DD}}",
+			"type": "date"
+		},
+		{
+			"name": "tags",
+			"value": "newsarticle, ",
+			"type": "multitext"
+		},
+		{
+			"name": "site",
+			"value": "{{site}}",
+			"type": "text"
+		}
+	],
+	"triggers": [
+		"www.statnews.com"
+	],
+	"noteNameFormat": "{{title|safe_name}}",
+	"path": "News Articles"
+}

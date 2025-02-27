@@ -1,0 +1,61 @@
+{
+	"schemaVersion": "0.1.0",
+	"name": "PR Newswire",
+	"behavior": "create",
+	"noteContentFormat": "{{selector:.full-release-body}}\n\n{{\"take the data in selector:.full-release-body and include wikilinks around people's names, clinical trial numbers, drug names, and disease names. Remove all html.\"}}\n",
+	"properties": [
+		{
+			"name": "title",
+			"value": "{{title}}",
+			"type": "text"
+		},
+		{
+			"name": "company_name",
+			"value": "{{author|wikilinks}}",
+			"type": "text"
+		},
+		{
+			"name": "date",
+			"value": "{{selector:html.inputtypes-search.inputtypes-tel.inputtypes-url.inputtypes-email.no-inputtypes-datetime.inputtypes-date.no-inputtypes-month.no-inputtypes-week.inputtypes-time.inputtypes-datetime-local.inputtypes-number.inputtypes-range.inputtypes-color.details.no-touchevents.js body.nir-node.nir-node--type-nir-news.nir-node--17496.reborn_lite.path-node.page-node-type-nir-news div.dialog-off-canvas-main-canvas div.wrapper main div.eventsDiv.section-pt-pb-60 div.container div.row div.offset-lg-2a.col-lg-9.content-siderbar-zIndex section#content div#content-area div div#lfg-content.lf-17496.cl-md-12 div#lfg-main-content.region.region-content div#block-client-site-content.block--system-main-block.block--system-main-block--17496.block--content--system-main-block.block--content--system-main-block--17496.block--f2ce7671-8532-4cf1-811a-8bd59a7104af.block--f2ce7671-8532-4cf1-811a-8bd59a7104af--17496.block.block-system.block-system-main-block article.node.node--nir-news--full.node--type-nir-news.node--view-mode-full.node--promoted div.llf-row.llf-my-4.llf-align-items-center div.llf-col-12.llf-col-md-6.llf-text-left div.field.field--name-field-nir-news-date.field--type-datetimezone.field--label-hidden}}",
+			"type": "date"
+		},
+		{
+			"name": "url",
+			"value": "{{url}}",
+			"type": "text"
+		},
+		{
+			"name": "therapeutics",
+			"value": "{{\\\"drug name in wikilinks\\\"}}",
+			"type": "text"
+		},
+		{
+			"name": "clinical_trials",
+			"value": "{{\\\"list of clinical trial IDs in wikilinks\\\"}}",
+			"type": "text"
+		},
+		{
+			"name": "people_mentioned",
+			"value": "{{\\\"list of people mentioned in this publication in wikilinks, in the format [[Last Name; First Name Middle Initial.]]. If no Middle Initial is available, do not include it and use the format  [[Last Name; First Name]]\\\"}}",
+			"type": "text"
+		},
+		{
+			"name": "disease_areas",
+			"value": "{{\\\"list of all diseases mentioned in wikilinks\\\"}}",
+			"type": "text"
+		},
+		{
+			"name": "type",
+			"value": "{{\\\"type of annnouncement from a list of tags: hiring, clinicalreadout, financing, programannouncement\\\"}}",
+			"type": "text"
+		},
+		{
+			"name": "tags",
+			"value": "pressrelease",
+			"type": "multitext"
+		}
+	],
+	"triggers": [],
+	"noteNameFormat": "{{title|safe_name:mac}}",
+	"path": "Press Releases"
+}

@@ -1,0 +1,53 @@
+{
+    "schemaVersion": "0.1.0",
+    "name": "bioarXiv",
+    "behavior": "create",
+    "noteContentFormat": "{{meta:name:DC.Description}}",
+    "properties": [
+      {
+        "name": "title",
+        "value": "{{title}}",
+        "type": "text"
+      },
+      {
+        "name": "authors",
+        "value": "{{meta:name:citation_author|wikilink|join|replace:\\\"/\\[(\\w+) ([^\\]]+)\\]/g\\\":\\\"[$2; $1]\\\"}}",
+        "type": "multitext"
+      },
+      {
+        "name": "url",
+        "value": "{{url}}",
+        "type": "text"
+      },
+      {
+        "name": "date",
+        "value": "{{meta:name:citation_date|date:YYYY-MM-DD}}",
+        "type": "date"
+      },
+      {
+        "name": "journal",
+        "value": "{{author}}",
+        "type": "text"
+      },
+      {
+        "name": "doi",
+        "value": "{{meta:name:citation_doi}}",
+        "type": "text"
+      },
+      {
+        "name": "pdf_url",
+        "value": "{{meta:name:citation_pdf_url}}",
+        "type": "text"
+      },
+      {
+        "name": "tags",
+        "value": "",
+        "type": "multitext"
+      }
+    ],
+    "triggers": [
+      "https://bioarxiv.org/"
+    ],
+    "noteNameFormat": "{{meta:name:citation_date|date:\"YYYY-MM-DD\"}} {{title|replace:\\\"/\\\",\\\"-\\\"|replace:\\\":\\\",\\\"-\\\"}}",
+    "path": "Papers/Inbox"
+  }
