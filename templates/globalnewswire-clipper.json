@@ -1,0 +1,43 @@
+{
+  "schemaVersion": "0.1.0",
+  "name": "GlobalNewsWire",
+  "behavior": "create",
+  "noteContentFormat": "{{description}}\n\n{{\"content with 1. company names included in wikilinks e.g. [[Sana Biotechnology]] 2. Convert each name mentioned into a wikilink using the format [[last name; first name MI.]]. If no middle initial is available, use [[last name; first name]]. Only the first letter of the first name, first letter of the last name, and middle initial (if present) should be capitalized. DO NOT MAKE MISTAKES, THIS IS IMPORTANT. 3. Include wikilinks around any gene/protein names e.g. [[CSF1R]] or diseases e.g. [[Alzheimer's Disease]]. DO NOT MAKE HALLUCINATIONS. INCLUDE ALL OF THE CONTENT.\"}}",
+  "properties": [
+    {
+      "name": "title",
+      "value": "{{title}}",
+      "type": "text"
+    },
+    {
+      "name": "date",
+      "value": "{{date|date:\\\"YYYY-MM-DD\\\"}}",
+      "type": "text"
+    },
+    {
+      "name": "url",
+      "value": "{{url}}",
+      "type": "text"
+    },
+    {
+      "name": "site",
+      "value": "{{site}}",
+      "type": "text"
+    },
+    {
+      "name": "author",
+      "value": "{{author}}",
+      "type": "multitext"
+    },
+    {
+      "name": "tags",
+      "value": "pressrelease",
+      "type": "multitext"
+    }
+  ],
+  "triggers": [
+    "https://www.globenewswire.com/"
+  ],
+  "noteNameFormat": "{{title|replace:(\"/\":\"-\", \":\":\"-\")}}",
+  "path": "Press Releases"
+}
