@@ -2,7 +2,7 @@
 	"schemaVersion": "0.1.0",
 	"name": "Nature",
 	"behavior": "create",
-	"noteContentFormat": "## Summary\n\n{{description}}\n\n## Highlights\n\n{{highlights}}\n\n## Notes\n\n",
+	"noteContentFormat": "## Key Connections\n{{\"a list of wikilinks for all methods, genes, animal models, cell models, proteins, or drug names e.g. [[Perturb-seq]], [[DNA Gyrase]], [[IL-4]], [[5X FAD]], etc\"}}\n\n## Summary\n\n{{description}}\n\n## Highlights\n\n{{highlights}}\n\n## Notes\n\n",
 	"properties": [
 	  {
 		"name": "title",
@@ -11,12 +11,12 @@
 	  },
 	  {
 		"name": "authors",
-		"value": "{{\\\"the authors of this publication in wikilinks, in the format [[Last Name; First Name Middle Initial.]]. If no Middle Initial is available, do not include it and use the format  [[Last Name; First Name]]\\\"}}",
+		"value": "{{\\\"the authors of this publication in wikilinks, in the format [[Last Name; First Name Middle Initial]]. If no Middle Initial is available, do not include it and use the format  [[Last Name; First Name]]\\\"}}",
 		"type": "multitext"
 	  },
 	  {
 		"name": "date",
-		"value": "{{meta:name:citation_publication_date|date:YYYY-MM-DD}}",
+		"value": "{{meta:name:citation_online_date}}",
 		"type": "date"
 	  },
 	  {
@@ -26,7 +26,7 @@
 	  },
 	  {
 		"name": "doi",
-		"value": "{{meta:name:prism.doi}}",
+		"value": "{{meta:name:citation_doi}}",
 		"type": "text"
 	  },
 	  {
@@ -78,6 +78,6 @@
 	"triggers": [
 	  "https://www.nature.com/articles/"
 	],
-	"noteNameFormat": "{{meta:name:citation_publication_date|date:\"YYYY-MM-DD\"}} {{title|replace:\\\"/\\\",\\\"-\\\"|replace:\\\":\\\",\\\"-\\\"}}",
+	"noteNameFormat": "{{meta:name:citation_online_date|date:\"YYYY-MM-DD\"}} {{title|safe_name}}",
 	"path": "Papers/Inbox"
   }
