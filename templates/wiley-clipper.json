@@ -1,79 +1,79 @@
 {
-    "schemaVersion": "0.1.0",
-    "name": "Wiley",
-    "behavior": "create",
-    "noteContentFormat": "## Key Topics\n{{\"Make a list of the key diseases, protein names, and gene names mentioned in this article. Put these names in wikilinks e.g. [[Alzheimer's Disease]]\"}}\n\n## Summary\n\n{{description}}\n\n## Highlights\n\n{{highlights}}\n\n## Content\n{{content}}\n\n## Notes\n\n",
-    "properties": [
-      {
-        "name": "title",
-        "value": "{{title}}",
-        "type": "text"
-      },
-      {
-        "name": "authors",
-        "value": "{{selector:.accordion-tabbed p.author-name|wikilink|join|replace:\\\"/\\[(\\w+) ([^\\]]+)\\]/g\\\":\\\"[$2; $1]\\\"}}",
-        "type": "multitext"
-      },
-      {
-        "name": "date",
-        "value": "{{meta:name:citation_online_date|date:YYYY-MM-DD}}",
-        "type": "date"
-      },
-      {
-        "name": "url",
-        "value": "{{url}}",
-        "type": "text"
-      },
-      {
-        "name": "doi",
-        "value": "{{meta:name:publication_doi}}",
-        "type": "text"
-      },
-      {
-        "name": "journal",
-        "value": "{{meta:name:citation_journal_title}}",
-        "type": "text"
-      },
-      {
-        "name": "volume",
-        "value": "",
-        "type": "text"
-      },
-      {
-        "name": "issue",
-        "value": "",
-        "type": "text"
-      },
-      {
-        "name": "pages",
-        "value": "",
-        "type": "text"
-      },
-      {
-        "name": "publisher",
-        "value": "{{meta:name:citation_publisher}}",
-        "type": "text"
-      },
-      {
-        "name": "type",
-        "value": "{{meta:property:og:type}}",
-        "type": "text"
-      },
-      {
-        "name": "created",
-        "value": "{{date|date:YYYY-MM-DD}}",
-        "type": "date"
-      },
-      {
-        "name": "tags",
-        "value": "papers, research, to-read",
-        "type": "multitext"
-      }
-    ],
-    "triggers": [
-      "https://advanced.onlinelibrary.wiley.com",
-      "https://onlinelibrary.wiley.com"
-    ],
-    "noteNameFormat": "{{meta:name:citation_online_date|date:\"YYYY-MM-DD\"}} {{title|replace:\\\"/\\\",\\\"-\\\"|replace:\\\":\\\",\\\"-\\\"}}",
-    "path": "Papers/Inbox"
-  }
+  "schemaVersion": "0.1.0",
+  "name": "Wiley",
+  "behavior": "create",
+  "noteContentFormat": "## Key Topics\n{{\"Make a list of the key diseases, protein names, and gene names mentioned in this article. Put these names in wikilinks e.g. [[Alzheimer's Disease]]\"}}\n\n## Summary\n\n{{description}}\n\n## Highlights\n\n{{highlights}}\n\n## Content\n{{content|markdown}}\n\n## Figures\n{{selector:.article-section__figure}}\n\n## Notes\n\n",
+  "properties": [
+    {
+      "name": "title",
+      "value": "{{title}}",
+      "type": "text"
+    },
+    {
+      "name": "authors",
+      "value": "{{selector:.accordion-tabbed p.author-name|wikilink|join|replace:\\\"/\\[(\\w+) ([^\\]]+)\\]/g\\\":\\\"[$2; $1]\\\"}}",
+      "type": "multitext"
+    },
+    {
+      "name": "date",
+      "value": "{{meta:name:citation_online_date|date:YYYY-MM-DD}}",
+      "type": "date"
+    },
+    {
+      "name": "url",
+      "value": "{{url}}",
+      "type": "text"
+    },
+    {
+      "name": "doi",
+      "value": "{{meta:name:publication_doi}}",
+      "type": "text"
+    },
+    {
+      "name": "journal",
+      "value": "{{meta:name:citation_journal_title}}",
+      "type": "text"
+    },
+    {
+      "name": "volume",
+      "value": "",
+      "type": "text"
+    },
+    {
+      "name": "issue",
+      "value": "",
+      "type": "text"
+    },
+    {
+      "name": "pages",
+      "value": "",
+      "type": "text"
+    },
+    {
+      "name": "publisher",
+      "value": "{{meta:name:citation_publisher}}",
+      "type": "text"
+    },
+    {
+      "name": "type",
+      "value": "{{meta:property:og:type}}",
+      "type": "text"
+    },
+    {
+      "name": "created",
+      "value": "{{date|date:YYYY-MM-DD}}",
+      "type": "date"
+    },
+    {
+      "name": "tags",
+      "value": "papers, research, to-read",
+      "type": "multitext"
+    }
+  ],
+  "triggers": [
+    "https://advanced.onlinelibrary.wiley.com",
+    "https://onlinelibrary.wiley.com"
+  ],
+  "noteNameFormat": "{{meta:name:citation_online_date|date:\"YYYY-MM-DD\"}} {{title|safe-name}}",
+  "path": "Papers/Inbox"
+}
