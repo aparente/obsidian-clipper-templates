@@ -1,147 +1,4 @@
 {
-  "highlighter_settings": {
-    "highlighterEnabled": true,
-    "alwaysShowHighlights": true,
-    "highlightBehavior": "highlight-inline"
-  },
-  "template_17394377531231oukseim6": {
-    "id": "17394377531231oukseim6",
-    "name": "PR Newswire",
-    "behavior": "create",
-    "noteNameFormat": "{{title|safe_name:mac}}",
-    "path": "Press Releases",
-    "noteContentFormat": "{{selector:.full-release-body}}\n\n{{\"take the data in selector:.full-release-body and include wikilinks around people's names, clinical trial numbers, drug names, and disease names. Remove all html.\"}}\n",
-    "properties": [
-      {
-        "id": "17394380485643x6h5u2kg",
-        "name": "title",
-        "value": "{{title}}",
-        "type": "text"
-      },
-      {
-        "id": "17394380833771xbm81c0y",
-        "name": "company_name",
-        "value": "{{author|wikilinks}}",
-        "type": "text"
-      },
-      {
-        "id": "17394380567354ot0ibcsd",
-        "name": "date",
-        "value": "{{selector:html.inputtypes-search.inputtypes-tel.inputtypes-url.inputtypes-email.no-inputtypes-datetime.inputtypes-date.no-inputtypes-month.no-inputtypes-week.inputtypes-time.inputtypes-datetime-local.inputtypes-number.inputtypes-range.inputtypes-color.details.no-touchevents.js body.nir-node.nir-node--type-nir-news.nir-node--17496.reborn_lite.path-node.page-node-type-nir-news div.dialog-off-canvas-main-canvas div.wrapper main div.eventsDiv.section-pt-pb-60 div.container div.row div.offset-lg-2a.col-lg-9.content-siderbar-zIndex section#content div#content-area div div#lfg-content.lf-17496.cl-md-12 div#lfg-main-content.region.region-content div#block-client-site-content.block--system-main-block.block--system-main-block--17496.block--content--system-main-block.block--content--system-main-block--17496.block--f2ce7671-8532-4cf1-811a-8bd59a7104af.block--f2ce7671-8532-4cf1-811a-8bd59a7104af--17496.block.block-system.block-system-main-block article.node.node--nir-news--full.node--type-nir-news.node--view-mode-full.node--promoted div.llf-row.llf-my-4.llf-align-items-center div.llf-col-12.llf-col-md-6.llf-text-left div.field.field--name-field-nir-news-date.field--type-datetimezone.field--label-hidden}}",
-        "type": "date"
-      },
-      {
-        "id": "17394380465383gif8kanz",
-        "name": "url",
-        "value": "{{url}}",
-        "type": "text"
-      },
-      {
-        "id": "1739437936041ehvrbdp5a",
-        "name": "therapeutics",
-        "value": "{{\\\"drug name in wikilinks\\\"}}",
-        "type": "text"
-      },
-      {
-        "id": "17394379534606sounq9zc",
-        "name": "clinical_trials",
-        "value": "{{\\\"list of clinical trial IDs in wikilinks\\\"}}",
-        "type": "text"
-      },
-      {
-        "id": "1739437978626q6nsgtwjo",
-        "name": "people_mentioned",
-        "value": "{{\\\"list of people mentioned in this publication in wikilinks, in the format [[Last Name; First Name Middle Initial.]]. If no Middle Initial is available, do not include it and use the format  [[Last Name; First Name]]\\\"}}",
-        "type": "text"
-      },
-      {
-        "id": "1739439299296dsyt5whce",
-        "name": "disease_areas",
-        "value": "{{\\\"list of all diseases mentioned in wikilinks\\\"}}",
-        "type": "text"
-      },
-      {
-        "id": "17394393206096afy7jw9g",
-        "name": "type",
-        "value": "{{\\\"type of annnouncement from a list of tags: hiring, clinicalreadout, financing, programannouncement\\\"}}",
-        "type": "text"
-      },
-      {
-        "id": "17394393878604kjgewg0t",
-        "name": "tags",
-        "value": "pressrelease",
-        "type": "multitext"
-      }
-    ],
-    "triggers": [],
-    "context": ""
-  },
-  "vaults": [],
-  "template_1734127134402vfcl6pp56": {
-    "id": "1734127134402vfcl6pp56",
-    "name": "New template",
-    "behavior": "create",
-    "noteNameFormat": "{{title}}",
-    "path": "Clippings",
-    "noteContentFormat": "{{content}}",
-    "properties": [],
-    "triggers": [],
-    "context": ""
-  },
-  "template_1734127073015oqe6pydcg": {
-    "id": "1734127073015oqe6pydcg",
-    "name": "Default",
-    "behavior": "create",
-    "noteNameFormat": "{{title|safe-name:mac}}",
-    "path": "Clippings",
-    "noteContentFormat": "{{content}}",
-    "context": "",
-    "properties": [
-      {
-        "id": "17341270730154pktohizt",
-        "name": "title",
-        "value": "{{title}}",
-        "type": "text"
-      },
-      {
-        "id": "1734127073015lp3im0kjw",
-        "name": "source",
-        "value": "{{url}}",
-        "type": "text"
-      },
-      {
-        "id": "1734127073015nwqmirffz",
-        "name": "author",
-        "value": "{{author|split:\\\", \\\"|wikilink|join}}",
-        "type": "multitext"
-      },
-      {
-        "id": "1734127073015ciyqsvgs9",
-        "name": "published",
-        "value": "{{published}}",
-        "type": "date"
-      },
-      {
-        "id": "1734127073015vrzulpeym",
-        "name": "created",
-        "value": "{{date}}",
-        "type": "date"
-      },
-      {
-        "id": "1734127073015lic5g281d",
-        "name": "description",
-        "value": "{{description}}",
-        "type": "text"
-      },
-      {
-        "id": "1734127073015i76pp36w6",
-        "name": "tags",
-        "value": "clippings",
-        "type": "multitext"
-      }
-    ],
-    "triggers": []
-  },
   "template_1739230210539x2jr3n9hr": {
     "schemaVersion": "0.1.0",
     "name": "Wiley",
@@ -236,6 +93,340 @@
     "id": "1739230210539x2jr3n9hr",
     "context": ""
   },
+  "highlighter_settings": {
+    "highlighterEnabled": true,
+    "alwaysShowHighlights": true,
+    "highlightBehavior": "highlight-inline"
+  },
+  "template_174065516495095bji72": {
+    "schemaVersion": "0.1.0",
+    "name": "bioarXiv",
+    "behavior": "create",
+    "noteContentFormat": "{{meta:property:og:description}}",
+    "properties": [
+      {
+        "id": "1740655164955hmh6ec1",
+        "name": "title",
+        "value": "{{title}}",
+        "type": "text"
+      },
+      {
+        "id": "1740655164955laj828j",
+        "name": "authors",
+        "value": "{{\\\"the authors of this publication in wikilinks, in the format [[Last Name; First Name Middle Initial.]]. If no Middle Initial is available, do not include it and use the format  [[Last Name; First Name]]\\\"}}",
+        "type": "multitext"
+      },
+      {
+        "id": "1740655164955s1q4xqn",
+        "name": "url",
+        "value": "{{url}}",
+        "type": "text"
+      },
+      {
+        "id": "1740655164955711mxdy",
+        "name": "date",
+        "value": "{{meta:name:citation_date|date:YYYY-MM-DD}}",
+        "type": "date"
+      },
+      {
+        "id": "1740655164955bqn4nt7",
+        "name": "journal",
+        "value": "{{author}}",
+        "type": "text"
+      },
+      {
+        "id": "1740655164955aclc6wf",
+        "name": "doi",
+        "value": "{{meta:name:citation_doi}}",
+        "type": "text"
+      },
+      {
+        "id": "1740655164955cmucmg6",
+        "name": "pdf_url",
+        "value": "{{meta:name:citation_pdf_url}}",
+        "type": "text"
+      },
+      {
+        "id": "1740655164955qxikwdx",
+        "name": "tags",
+        "value": "",
+        "type": "multitext"
+      }
+    ],
+    "triggers": [
+      "https://bioarxiv.org/"
+    ],
+    "noteNameFormat": "{{meta:name:citation_date|date:\"YYYY-MM-DD\"}} {{title|safe-name:mac}}",
+    "path": "Papers/Inbox",
+    "id": "174065516495095bji72",
+    "context": ""
+  },
+  "template_1734127073015oqe6pydcg": {
+    "id": "1734127073015oqe6pydcg",
+    "name": "Default",
+    "behavior": "create",
+    "noteNameFormat": "{{title|safe-name:mac}}",
+    "path": "Clippings",
+    "noteContentFormat": "{{content}}",
+    "context": "",
+    "properties": [
+      {
+        "id": "17341270730154pktohizt",
+        "name": "title",
+        "value": "{{title}}",
+        "type": "text"
+      },
+      {
+        "id": "1734127073015lp3im0kjw",
+        "name": "source",
+        "value": "{{url}}",
+        "type": "text"
+      },
+      {
+        "id": "1734127073015nwqmirffz",
+        "name": "author",
+        "value": "{{author|split:\\\", \\\"|wikilink|join}}",
+        "type": "multitext"
+      },
+      {
+        "id": "1734127073015ciyqsvgs9",
+        "name": "published",
+        "value": "{{published}}",
+        "type": "date"
+      },
+      {
+        "id": "1734127073015vrzulpeym",
+        "name": "created",
+        "value": "{{date}}",
+        "type": "date"
+      },
+      {
+        "id": "1734127073015lic5g281d",
+        "name": "description",
+        "value": "{{description}}",
+        "type": "text"
+      },
+      {
+        "id": "1734127073015i76pp36w6",
+        "name": "tags",
+        "value": "clippings",
+        "type": "multitext"
+      }
+    ],
+    "triggers": []
+  },
+  "template_1740713508743yv8j738": {
+    "schemaVersion": "0.1.0",
+    "name": "GlobalNewsWire",
+    "behavior": "create",
+    "noteContentFormat": "{{description}}\n\n{{\"content with 1. company names included in wikilinks e.g. [[Sana Biotechnology]] 2. Convert each name mentioned into a wikilink using the format [[last name; first name MI.]]. If no middle initial is available, use [[last name; first name]]. Only the first letter of the first name, first letter of the last name, and middle initial (if present) should be capitalized. DO NOT MAKE MISTAKES, THIS IS IMPORTANT. 3. Include wikilinks around any gene/protein names e.g. [[CSF1R]] or diseases e.g. [[Alzheimer's Disease]]. DO NOT MAKE HALLUCINATIONS. INCLUDE ALL OF THE CONTENT.\"}}",
+    "properties": [
+      {
+        "id": "1740713508743dlu81dv",
+        "name": "title",
+        "value": "{{title}}",
+        "type": "text"
+      },
+      {
+        "id": "17407135087439gab4xr",
+        "name": "date",
+        "value": "{{date|date:\\\"YYYY-MM-DD\\\"}}",
+        "type": "date"
+      },
+      {
+        "id": "17407135087438gowkr7",
+        "name": "url",
+        "value": "{{url}}",
+        "type": "text"
+      },
+      {
+        "id": "1740713508743vt2ft9a",
+        "name": "site",
+        "value": "{{site}}",
+        "type": "text"
+      },
+      {
+        "id": "1740713508743npnfid0",
+        "name": "author",
+        "value": "{{author}}",
+        "type": "multitext"
+      },
+      {
+        "id": "1740713508743grepbhp",
+        "name": "tags",
+        "value": "pressrelease",
+        "type": "multitext"
+      }
+    ],
+    "triggers": [
+      "https://www.globenewswire.com/"
+    ],
+    "noteNameFormat": "{{title|safe-name:mac}}",
+    "path": "Press Releases",
+    "id": "1740713508743yv8j738",
+    "context": ""
+  },
+  "interpreter_settings": {
+    "interpreterModel": "1735978827294",
+    "models": [
+      {
+        "id": "1734127226421",
+        "providerId": "1734127221643",
+        "providerModelId": "llama3:8b",
+        "name": "llama3:8b",
+        "enabled": true
+      },
+      {
+        "id": "1734127361062",
+        "providerId": "1734127294499",
+        "providerModelId": "claude-3-5-haiku-20241022",
+        "name": "Claude 3.5 Haiku",
+        "enabled": true
+      },
+      {
+        "id": "1735978827294",
+        "providerId": "1735978817639",
+        "providerModelId": "models/gemini-1.5-flash-8b",
+        "name": "gemini-1.5-flash-8b",
+        "enabled": true
+      },
+      {
+        "id": "1739065848393",
+        "providerId": "1734127221643",
+        "providerModelId": "deepseek-r1:32b",
+        "name": "deepseek-r1:32b",
+        "enabled": true
+      }
+    ],
+    "providers": [
+      {
+        "id": "1734127221643",
+        "name": "Ollama",
+        "baseUrl": "http://127.0.0.1:11434/api/chat",
+        "apiKey": "n/a"
+      },
+      {
+        "id": "1734127294499",
+        "name": "Anthropic",
+        "baseUrl": "https://api.anthropic.com/v1/messages",
+        "apiKey": ""
+      },
+      {
+        "id": "1734127353009",
+        "name": "OpenAI",
+        "baseUrl": "https://api.openai.com/v1/chat/completions",
+        "apiKey": ""
+      },
+      {
+        "id": "1735978817639",
+        "name": "Google Gemini",
+        "baseUrl": "https://generativelanguage.googleapis.com/v1beta/chat/completions",
+        "apiKey": ""
+      }
+    ],
+    "interpreterEnabled": true,
+    "interpreterAutoRun": false,
+    "defaultPromptContext": ""
+  },
+  "template_1735975961966sj09in9": {
+    "schemaVersion": "0.1.0",
+    "name": "Nature",
+    "behavior": "create",
+    "noteNameFormat": "{{meta:name:citation_online_date|date:\"YYYY-MM-DD\"}} {{title|safe_name:mac}}",
+    "path": "Papers/Inbox",
+    "noteContentFormat": "## Key Connections\n{{\"a list of wikilinks for all methods, genes, animal models, cell models, proteins, or drug names e.g. [[Perturb-seq]], [[DNA Gyrase]], [[IL-4]], [[5X FAD]], etc\"}}\n\n## Summary\n\n{{description}}\n\n## Highlights\n\n{{highlights}}\n\n## Notes\n\n",
+    "properties": [
+      {
+        "id": "1735975961973fjefj8q",
+        "name": "title",
+        "value": "{{title}}",
+        "type": "text"
+      },
+      {
+        "id": "17359759619734ucnz2s",
+        "name": "authors",
+        "value": "{{\\\"the authors of this publication in wikilinks, in the format [[Last Name; First Name Middle Initial]]. If no Middle Initial is available, do not include it and use the format  [[Last Name; First Name]]\\\"}}",
+        "type": "multitext"
+      },
+      {
+        "id": "1735975961973i2ir5x6",
+        "name": "date",
+        "value": "{{meta:name:citation_online_date}}",
+        "type": "date"
+      },
+      {
+        "id": "1735975961973rtec1za",
+        "name": "url",
+        "value": "{{url}}",
+        "type": "text"
+      },
+      {
+        "id": "1735975961973tltynlt",
+        "name": "doi",
+        "value": "{{meta:name:citation_doi}}",
+        "type": "text"
+      },
+      {
+        "id": "1735975961973imjpmcv",
+        "name": "journal",
+        "value": "{{meta:name:citation_journal_title}}",
+        "type": "text"
+      },
+      {
+        "id": "17359759619738dtnnoi",
+        "name": "journal_abbrev",
+        "value": "{{meta:name:citation_journal_abbrev}}",
+        "type": "text"
+      },
+      {
+        "id": "173597596197312yveiq",
+        "name": "volume",
+        "value": "{{meta:name:citation_volume}}",
+        "type": "text"
+      },
+      {
+        "id": "1735975961973f8h827r",
+        "name": "issue",
+        "value": "{{meta:name:citation_issue}}",
+        "type": "text"
+      },
+      {
+        "id": "17359759619736cydfpn",
+        "name": "pages",
+        "value": "{{meta:name:citation_firstpage}}-{{meta:name:citation_lastpage}}",
+        "type": "text"
+      },
+      {
+        "id": "1735975961973g369bkx",
+        "name": "publisher",
+        "value": "{{meta:name:citation_publisher}}",
+        "type": "text"
+      },
+      {
+        "id": "1735975961973anfskf1",
+        "name": "type",
+        "value": "{{meta:name:citation_article_type}}",
+        "type": "text"
+      },
+      {
+        "id": "1735975961973horjzg9",
+        "name": "created",
+        "value": "{{date}}",
+        "type": "date"
+      },
+      {
+        "id": "1735975961973ru3yote",
+        "name": "tags",
+        "value": "papers, research, to-read",
+        "type": "multitext"
+      }
+    ],
+    "triggers": [
+      "https://www.nature.com/articles/"
+    ],
+    "id": "1735975961966sj09in9",
+    "context": ""
+  },
   "template_173647221419658wfysb": {
     "schemaVersion": "0.1.0",
     "name": "STAT News",
@@ -285,6 +476,226 @@
     "noteNameFormat": "{{title|safe_name:mac}}",
     "path": "News Articles",
     "id": "173647221419658wfysb",
+    "context": ""
+  },
+  "template_17394377531231oukseim6": {
+    "id": "17394377531231oukseim6",
+    "name": "PR Newswire",
+    "behavior": "create",
+    "noteNameFormat": "{{schema:@NewsArticle:datePublished|date:\"YYYY-MM-DD\"}} {{title|safe_name:mac}}",
+    "path": "Press Releases",
+    "noteContentFormat": "{{selector:.full-release-body}}\n\n{{\"take the data in selector:.full-release-body and include wikilinks around people's names, clinical trial numbers, drug names, and disease names. Remove all html.\"}}\n",
+    "properties": [
+      {
+        "id": "17394380485643x6h5u2kg",
+        "name": "title",
+        "value": "{{title}}",
+        "type": "text"
+      },
+      {
+        "id": "17394380833771xbm81c0y",
+        "name": "company_name",
+        "value": "{{author|wikilinks}}",
+        "type": "text"
+      },
+      {
+        "id": "17394380567354ot0ibcsd",
+        "name": "date",
+        "value": "{{schema:@NewsArticle:datePublished}}",
+        "type": "date"
+      },
+      {
+        "id": "17394380465383gif8kanz",
+        "name": "url",
+        "value": "{{url}}",
+        "type": "text"
+      },
+      {
+        "id": "1739437936041ehvrbdp5a",
+        "name": "therapeutics",
+        "value": "{{\\\"drug name in wikilinks\\\"}}",
+        "type": "text"
+      },
+      {
+        "id": "17394379534606sounq9zc",
+        "name": "clinical_trials",
+        "value": "{{\\\"list of clinical trial IDs in wikilinks\\\"}}",
+        "type": "multitext"
+      },
+      {
+        "id": "1739437978626q6nsgtwjo",
+        "name": "people_mentioned",
+        "value": "{{\\\"list of people mentioned in this publication in wikilinks, in the format [[Last Name; First Name Middle Initial.]]. If no Middle Initial is available, do not include it and use the format  [[Last Name; First Name]]\\\"}}",
+        "type": "multitext"
+      },
+      {
+        "id": "1739439299296dsyt5whce",
+        "name": "disease_areas",
+        "value": "{{\\\"list of all diseases mentioned in wikilinks\\\"}}",
+        "type": "multitext"
+      },
+      {
+        "id": "17394393206096afy7jw9g",
+        "name": "type",
+        "value": "{{\\\"type of annnouncement from a list of tags: hiring, clinicalreadout, financing, programannouncement\\\"}}",
+        "type": "text"
+      },
+      {
+        "id": "17394393878604kjgewg0t",
+        "name": "tags",
+        "value": "pressrelease",
+        "type": "multitext"
+      }
+    ],
+    "triggers": [],
+    "context": ""
+  },
+  "vaults": [],
+  "template_1739472725552oyylk6glc": {
+    "id": "1739472725552oyylk6glc",
+    "name": "Blog",
+    "behavior": "create",
+    "noteNameFormat": "{{title|safe_name:mac}}",
+    "path": "Clippings",
+    "noteContentFormat": "{{content}}",
+    "properties": [
+      {
+        "id": "1739472791363l3x8dexju",
+        "name": "tags",
+        "value": "{{\\\"3 tags describing this article, including \\\"blog\\\"\\\"}}",
+        "type": "multitext"
+      },
+      {
+        "id": "1739472794983do8e8xnmk",
+        "name": "date",
+        "value": "{{published}}",
+        "type": "date"
+      },
+      {
+        "id": "1739472799034xjgwl22ub",
+        "name": "title",
+        "value": "{{title}}",
+        "type": "text"
+      },
+      {
+        "id": "1739472853634zm985h3g3",
+        "name": "author",
+        "value": "{{author|wikilink|join|replace:\\\"/\\[(\\w+) ([^\\]]+)\\]/g\\\":\\\"[$2; $1]\\\"}}",
+        "type": "multitext"
+      },
+      {
+        "id": "17394738798823jzh8lycc",
+        "name": "url",
+        "value": "{{url}}",
+        "type": "text"
+      }
+    ],
+    "triggers": [],
+    "context": ""
+  },
+  "general_settings": {
+    "showMoreActionsButton": false,
+    "betaFeatures": false,
+    "legacyMode": false,
+    "silentOpen": false
+  },
+  "template_17383962666833cjnb65": {
+    "schemaVersion": "0.1.0",
+    "name": "Science",
+    "behavior": "create",
+    "noteContentFormat": "## Summary\n\n{{description}}\n\n## Highlights\n\n{{highlights}}\n\n## Notes\n\n",
+    "properties": [
+      {
+        "id": "1738396266683d3e37mz",
+        "name": "title",
+        "value": "{{title}}",
+        "type": "text"
+      },
+      {
+        "id": "1738396266683x498gi8",
+        "name": "authors",
+        "value": "{{\\\"the authors of this publication in wikilinks, in the format [[Last Name; First Name Middle Initial.]]. If no Middle Initial is available, do not include it and use the format  [[Last Name; First Name]]\\\"}}",
+        "type": "multitext"
+      },
+      {
+        "id": "1738396266683dlxybu7",
+        "name": "date",
+        "value": "{{meta:name:citation_publication_date|date:YYYY-MM-DD}}",
+        "type": "date"
+      },
+      {
+        "id": "1738396266683z9ixejb",
+        "name": "url",
+        "value": "{{url}}",
+        "type": "text"
+      },
+      {
+        "id": "1738396266683xa6glwb",
+        "name": "doi",
+        "value": "{{meta:name:prism.doi}}",
+        "type": "text"
+      },
+      {
+        "id": "1738396266683g05du6i",
+        "name": "journal",
+        "value": "{{meta:name:citation_journal_title}}",
+        "type": "text"
+      },
+      {
+        "id": "1738396266683k67b868",
+        "name": "journal_abbrev",
+        "value": "{{meta:name:citation_journal_abbrev}}",
+        "type": "text"
+      },
+      {
+        "id": "1738396266683xe4kxpm",
+        "name": "volume",
+        "value": "{{meta:name:citation_volume}}",
+        "type": "text"
+      },
+      {
+        "id": "1738396266683xjfmvcb",
+        "name": "issue",
+        "value": "{{meta:name:citation_issue}}",
+        "type": "text"
+      },
+      {
+        "id": "1738396266683rld7xtn",
+        "name": "pages",
+        "value": "{{meta:name:citation_firstpage}}-{{meta:name:citation_lastpage}}",
+        "type": "text"
+      },
+      {
+        "id": "1738396266683nmg5d2d",
+        "name": "publisher",
+        "value": "{{meta:name:citation_publisher}}",
+        "type": "text"
+      },
+      {
+        "id": "1738396266683f39utpn",
+        "name": "type",
+        "value": "{{meta:name:citation_article_type}}",
+        "type": "text"
+      },
+      {
+        "id": "1738396266683gi0fsyz",
+        "name": "created",
+        "value": "{{date}}",
+        "type": "date"
+      },
+      {
+        "id": "1738396266683bmhyv1v",
+        "name": "tags",
+        "value": "papers, research, to-read",
+        "type": "multitext"
+      }
+    ],
+    "triggers": [
+      "https://www.science.org"
+    ],
+    "noteNameFormat": "{{meta:name:citation_publication_date|date:\"YYYY-MM-DD\"}} {{title|safe_name:mac}}",
+    "path": "Papers/Inbox",
+    "id": "17383962666833cjnb65",
     "context": ""
   },
   "property_types": [
@@ -391,15 +802,15 @@
     },
     {
       "name": "clinical_trials",
-      "type": "text"
+      "type": "multitext"
     },
     {
       "name": "people_mentioned",
-      "type": "text"
+      "type": "multitext"
     },
     {
       "name": "disease_areas",
-      "type": "text"
+      "type": "multitext"
     },
     {
       "name": "pdf_url",
@@ -407,334 +818,29 @@
       "defaultValue": "{{meta:name:citation_pdf_url}}"
     }
   ],
-  "template_1739472725552oyylk6glc": {
-    "id": "1739472725552oyylk6glc",
-    "name": "Blog",
+  "template_list": [
+    "1740713508743yv8j738",
+    "174065516495095bji72",
+    "1739472725552oyylk6glc",
+    "17394377531231oukseim6",
+    "1739230210539x2jr3n9hr",
+    "17383962666833cjnb65",
+    "173647221419658wfysb",
+    "1735975961966sj09in9",
+    "1734127138314suvs4h0",
+    "1734127134402vfcl6pp56",
+    "1734127073015oqe6pydcg"
+  ],
+  "template_1734127134402vfcl6pp56": {
+    "id": "1734127134402vfcl6pp56",
+    "name": "New template",
     "behavior": "create",
-    "noteNameFormat": "{{title|safe_name:mac}}",
+    "noteNameFormat": "{{title}}",
     "path": "Clippings",
     "noteContentFormat": "{{content}}",
-    "properties": [
-      {
-        "id": "1739472791363l3x8dexju",
-        "name": "tags",
-        "value": "{{\\\"3 tags describing this article, including \\\"blog\\\"\\\"}}",
-        "type": "multitext"
-      },
-      {
-        "id": "1739472794983do8e8xnmk",
-        "name": "date",
-        "value": "{{published}}",
-        "type": "date"
-      },
-      {
-        "id": "1739472799034xjgwl22ub",
-        "name": "title",
-        "value": "{{title}}",
-        "type": "text"
-      },
-      {
-        "id": "1739472853634zm985h3g3",
-        "name": "author",
-        "value": "{{author|wikilink|join|replace:\\\"/\\[(\\w+) ([^\\]]+)\\]/g\\\":\\\"[$2; $1]\\\"}}",
-        "type": "multitext"
-      },
-      {
-        "id": "17394738798823jzh8lycc",
-        "name": "url",
-        "value": "{{url}}",
-        "type": "text"
-      }
-    ],
+    "properties": [],
     "triggers": [],
     "context": ""
-  },
-  "template_1740713508743yv8j738": {
-    "schemaVersion": "0.1.0",
-    "name": "GlobalNewsWire",
-    "behavior": "create",
-    "noteContentFormat": "{{description}}\n\n{{\"content with 1. company names included in wikilinks e.g. [[Sana Biotechnology]] 2. Convert each name mentioned into a wikilink using the format [[last name; first name MI.]]. If no middle initial is available, use [[last name; first name]]. Only the first letter of the first name, first letter of the last name, and middle initial (if present) should be capitalized. DO NOT MAKE MISTAKES, THIS IS IMPORTANT. 3. Include wikilinks around any gene/protein names e.g. [[CSF1R]] or diseases e.g. [[Alzheimer's Disease]]. DO NOT MAKE HALLUCINATIONS. INCLUDE ALL OF THE CONTENT.\"}}",
-    "properties": [
-      {
-        "id": "1740713508743dlu81dv",
-        "name": "title",
-        "value": "{{title}}",
-        "type": "text"
-      },
-      {
-        "id": "17407135087439gab4xr",
-        "name": "date",
-        "value": "{{date|date:\\\"YYYY-MM-DD\\\"}}",
-        "type": "date"
-      },
-      {
-        "id": "17407135087438gowkr7",
-        "name": "url",
-        "value": "{{url}}",
-        "type": "text"
-      },
-      {
-        "id": "1740713508743vt2ft9a",
-        "name": "site",
-        "value": "{{site}}",
-        "type": "text"
-      },
-      {
-        "id": "1740713508743npnfid0",
-        "name": "author",
-        "value": "{{author}}",
-        "type": "multitext"
-      },
-      {
-        "id": "1740713508743grepbhp",
-        "name": "tags",
-        "value": "pressrelease",
-        "type": "multitext"
-      }
-    ],
-    "triggers": [
-      "https://www.globenewswire.com/"
-    ],
-    "noteNameFormat": "{{title|safe-name:mac}}",
-    "path": "Press Releases",
-    "id": "1740713508743yv8j738",
-    "context": ""
-  },
-  "general_settings": {
-    "showMoreActionsButton": false,
-    "betaFeatures": false,
-    "legacyMode": false,
-    "silentOpen": false
-  },
-  "template_174065516495095bji72": {
-    "schemaVersion": "0.1.0",
-    "name": "bioarXiv",
-    "behavior": "create",
-    "noteContentFormat": "{{meta:property:og:description}}",
-    "properties": [
-      {
-        "id": "1740655164955hmh6ec1",
-        "name": "title",
-        "value": "{{title}}",
-        "type": "text"
-      },
-      {
-        "id": "1740655164955laj828j",
-        "name": "authors",
-        "value": "{{\\\"the authors of this publication in wikilinks, in the format [[Last Name; First Name Middle Initial.]]. If no Middle Initial is available, do not include it and use the format  [[Last Name; First Name]]\\\"}}",
-        "type": "multitext"
-      },
-      {
-        "id": "1740655164955s1q4xqn",
-        "name": "url",
-        "value": "{{url}}",
-        "type": "text"
-      },
-      {
-        "id": "1740655164955711mxdy",
-        "name": "date",
-        "value": "{{meta:name:citation_date|date:YYYY-MM-DD}}",
-        "type": "date"
-      },
-      {
-        "id": "1740655164955bqn4nt7",
-        "name": "journal",
-        "value": "{{author}}",
-        "type": "text"
-      },
-      {
-        "id": "1740655164955aclc6wf",
-        "name": "doi",
-        "value": "{{meta:name:citation_doi}}",
-        "type": "text"
-      },
-      {
-        "id": "1740655164955cmucmg6",
-        "name": "pdf_url",
-        "value": "{{meta:name:citation_pdf_url}}",
-        "type": "text"
-      },
-      {
-        "id": "1740655164955qxikwdx",
-        "name": "tags",
-        "value": "",
-        "type": "multitext"
-      }
-    ],
-    "triggers": [
-      "https://bioarxiv.org/"
-    ],
-    "noteNameFormat": "{{meta:name:citation_date|date:\"YYYY-MM-DD\"}} {{title|safe-name:mac}}",
-    "path": "Papers/Inbox",
-    "id": "174065516495095bji72",
-    "context": ""
-  },
-  "interpreter_settings": {
-    "interpreterModel": "1735978827294",
-    "models": [
-      {
-        "id": "1734127226421",
-        "providerId": "1734127221643",
-        "providerModelId": "llama3:8b",
-        "name": "llama3:8b",
-        "enabled": true
-      },
-      {
-        "id": "1734127361062",
-        "providerId": "1734127294499",
-        "providerModelId": "claude-3-5-haiku-20241022",
-        "name": "Claude 3.5 Haiku",
-        "enabled": true
-      },
-      {
-        "id": "1735978827294",
-        "providerId": "1735978817639",
-        "providerModelId": "models/gemini-1.5-flash-8b",
-        "name": "gemini-1.5-flash-8b",
-        "enabled": true
-      },
-      {
-        "id": "1739065848393",
-        "providerId": "1734127221643",
-        "providerModelId": "deepseek-r1:32b",
-        "name": "deepseek-r1:32b",
-        "enabled": true
-      }
-    ],
-    "providers": [
-      {
-        "id": "1734127221643",
-        "name": "Ollama",
-        "baseUrl": "http://127.0.0.1:11434/api/chat",
-        "apiKey": "n/a"
-      },
-      {
-        "id": "1734127294499",
-        "name": "Anthropic",
-        "baseUrl": "https://api.anthropic.com/v1/messages",
-        "apiKey": ""
-      },
-      {
-        "id": "1734127353009",
-        "name": "OpenAI",
-        "baseUrl": "https://api.openai.com/v1/chat/completions",
-        "apiKey": ""
-      },
-      {
-        "id": "1735978817639",
-        "name": "Google Gemini",
-        "baseUrl": "https://generativelanguage.googleapis.com/v1beta/chat/completions",
-        "apiKey": ""
-      }
-    ],
-    "interpreterEnabled": true,
-    "interpreterAutoRun": false,
-    "defaultPromptContext": ""
-  },
-  "template_17383962666833cjnb65": {
-    "schemaVersion": "0.1.0",
-    "name": "Science",
-    "behavior": "create",
-    "noteContentFormat": "## Summary\n\n{{description}}\n\n## Highlights\n\n{{highlights}}\n\n## Notes\n\n",
-    "properties": [
-      {
-        "id": "1738396266683d3e37mz",
-        "name": "title",
-        "value": "{{title}}",
-        "type": "text"
-      },
-      {
-        "id": "1738396266683x498gi8",
-        "name": "authors",
-        "value": "{{\\\"the authors of this publication in wikilinks, in the format [[Last Name; First Name Middle Initial.]]. If no Middle Initial is available, do not include it and use the format  [[Last Name; First Name]]\\\"}}",
-        "type": "multitext"
-      },
-      {
-        "id": "1738396266683dlxybu7",
-        "name": "date",
-        "value": "{{meta:name:citation_publication_date|date:YYYY-MM-DD}}",
-        "type": "date"
-      },
-      {
-        "id": "1738396266683z9ixejb",
-        "name": "url",
-        "value": "{{url}}",
-        "type": "text"
-      },
-      {
-        "id": "1738396266683xa6glwb",
-        "name": "doi",
-        "value": "{{meta:name:prism.doi}}",
-        "type": "text"
-      },
-      {
-        "id": "1738396266683g05du6i",
-        "name": "journal",
-        "value": "{{meta:name:citation_journal_title}}",
-        "type": "text"
-      },
-      {
-        "id": "1738396266683k67b868",
-        "name": "journal_abbrev",
-        "value": "{{meta:name:citation_journal_abbrev}}",
-        "type": "text"
-      },
-      {
-        "id": "1738396266683xe4kxpm",
-        "name": "volume",
-        "value": "{{meta:name:citation_volume}}",
-        "type": "text"
-      },
-      {
-        "id": "1738396266683xjfmvcb",
-        "name": "issue",
-        "value": "{{meta:name:citation_issue}}",
-        "type": "text"
-      },
-      {
-        "id": "1738396266683rld7xtn",
-        "name": "pages",
-        "value": "{{meta:name:citation_firstpage}}-{{meta:name:citation_lastpage}}",
-        "type": "text"
-      },
-      {
-        "id": "1738396266683nmg5d2d",
-        "name": "publisher",
-        "value": "{{meta:name:citation_publisher}}",
-        "type": "text"
-      },
-      {
-        "id": "1738396266683f39utpn",
-        "name": "type",
-        "value": "{{meta:name:citation_article_type}}",
-        "type": "text"
-      },
-      {
-        "id": "1738396266683gi0fsyz",
-        "name": "created",
-        "value": "{{date}}",
-        "type": "date"
-      },
-      {
-        "id": "1738396266683bmhyv1v",
-        "name": "tags",
-        "value": "papers, research, to-read",
-        "type": "multitext"
-      }
-    ],
-    "triggers": [
-      "https://www.science.org"
-    ],
-    "noteNameFormat": "{{meta:name:citation_publication_date|date:\"YYYY-MM-DD\"}} {{title|safe_name:mac}}",
-    "path": "Papers/Inbox",
-    "id": "17383962666833cjnb65",
-    "context": ""
-  },
-  "stats": {
-    "addToObsidian": 18,
-    "saveFile": 0,
-    "copyToClipboard": 0,
-    "share": 0
   },
   "template_1734127138314suvs4h0": {
     "schemaVersion": "0.1.0",
@@ -799,116 +905,10 @@
     "id": "1734127138314suvs4h0",
     "context": ""
   },
-  "template_1735975961966sj09in9": {
-    "schemaVersion": "0.1.0",
-    "name": "Nature",
-    "behavior": "create",
-    "noteNameFormat": "{{meta:name:citation_online_date|date:\"YYYY-MM-DD\"}} {{title|safe_name:mac}}",
-    "path": "Papers/Inbox",
-    "noteContentFormat": "## Key Connections\n{{\"a list of wikilinks for all methods, genes, animal models, cell models, proteins, or drug names e.g. [[Perturb-seq]], [[DNA Gyrase]], [[IL-4]], [[5X FAD]], etc\"}}\n\n## Summary\n\n{{description}}\n\n## Highlights\n\n{{highlights}}\n\n## Notes\n\n",
-    "properties": [
-      {
-        "id": "1735975961973fjefj8q",
-        "name": "title",
-        "value": "{{title}}",
-        "type": "text"
-      },
-      {
-        "id": "17359759619734ucnz2s",
-        "name": "authors",
-        "value": "{{\\\"the authors of this publication in wikilinks, in the format [[Last Name; First Name Middle Initial]]. If no Middle Initial is available, do not include it and use the format  [[Last Name; First Name]]\\\"}}",
-        "type": "multitext"
-      },
-      {
-        "id": "1735975961973i2ir5x6",
-        "name": "date",
-        "value": "{{meta:name:citation_online_date}}",
-        "type": "date"
-      },
-      {
-        "id": "1735975961973rtec1za",
-        "name": "url",
-        "value": "{{url}}",
-        "type": "text"
-      },
-      {
-        "id": "1735975961973tltynlt",
-        "name": "doi",
-        "value": "{{meta:name:citation_doi}}",
-        "type": "text"
-      },
-      {
-        "id": "1735975961973imjpmcv",
-        "name": "journal",
-        "value": "{{meta:name:citation_journal_title}}",
-        "type": "text"
-      },
-      {
-        "id": "17359759619738dtnnoi",
-        "name": "journal_abbrev",
-        "value": "{{meta:name:citation_journal_abbrev}}",
-        "type": "text"
-      },
-      {
-        "id": "173597596197312yveiq",
-        "name": "volume",
-        "value": "{{meta:name:citation_volume}}",
-        "type": "text"
-      },
-      {
-        "id": "1735975961973f8h827r",
-        "name": "issue",
-        "value": "{{meta:name:citation_issue}}",
-        "type": "text"
-      },
-      {
-        "id": "17359759619736cydfpn",
-        "name": "pages",
-        "value": "{{meta:name:citation_firstpage}}-{{meta:name:citation_lastpage}}",
-        "type": "text"
-      },
-      {
-        "id": "1735975961973g369bkx",
-        "name": "publisher",
-        "value": "{{meta:name:citation_publisher}}",
-        "type": "text"
-      },
-      {
-        "id": "1735975961973anfskf1",
-        "name": "type",
-        "value": "{{meta:name:citation_article_type}}",
-        "type": "text"
-      },
-      {
-        "id": "1735975961973horjzg9",
-        "name": "created",
-        "value": "{{date}}",
-        "type": "date"
-      },
-      {
-        "id": "1735975961973ru3yote",
-        "name": "tags",
-        "value": "papers, research, to-read",
-        "type": "multitext"
-      }
-    ],
-    "triggers": [
-      "https://www.nature.com/articles/"
-    ],
-    "id": "1735975961966sj09in9",
-    "context": ""
-  },
-  "template_list": [
-    "1740713508743yv8j738",
-    "174065516495095bji72",
-    "1739472725552oyylk6glc",
-    "17394377531231oukseim6",
-    "1739230210539x2jr3n9hr",
-    "17383962666833cjnb65",
-    "173647221419658wfysb",
-    "1735975961966sj09in9",
-    "1734127138314suvs4h0",
-    "1734127134402vfcl6pp56",
-    "1734127073015oqe6pydcg"
-  ]
+  "stats": {
+    "addToObsidian": 19,
+    "saveFile": 0,
+    "copyToClipboard": 0,
+    "share": 0
+  }
 }
